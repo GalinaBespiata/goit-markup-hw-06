@@ -14,6 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/" />
   </head>
   <body class="page">
     <header class="header">
@@ -414,9 +415,29 @@
             </li>
           </ul>
         </div>
+        
+        <div class="cellar-container-subscribe">
+          <p class="cellar-subscribe">Підпишіться на розсилку</p>
+          <form class="subscribe-form">
+            <div class="subscribe-container">
+              <label class="subscribe-area"
+                ><input
+                  type="email"
+                  class="subscribe-input"
+                  name="user-email"
+                  placeholder="E-mail"
+                  required=""
+              /></label>
+            </div>
+            <div>
+              <button type="submit" class="submit-subscribe">Відправити</button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <!-----------Modal-window----------------------->
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="button close-modal" data-modal-close>
           <svg class="icon-close-black">
@@ -424,7 +445,7 @@
           </svg>
         </button>
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="modal-form">
+        <form class="form">
           <div class="modal-container">
             <label class="modal-area-title"
               ><span class="modal-area-container">Ім'я</span
@@ -482,15 +503,20 @@
             ></label>
           </div>
           <div class="modal-container radio">
-            <label for="accept-mailing" class="accept"
-              ><input
-                type="checkbox"
-                class="accept-mailing"
-                id="accept-mailing"
-                name="accept-mailing"
-                value="true"
-              />Погоджуюся з розсилкою та приймаю
-              <a class="terms-of-contract" href="">Умови договору</a></label
+            <input
+              type="checkbox"
+              class="accept-mailing visually-hidden"
+              id="accept-mailing"
+              name="accept-mailing"
+              value="true"
+            /><label for="accept-mailing" class="accept"
+              ><span
+                ><svg class="check-icon" width="16" height="15">
+                  <use href="./images/icon.svg#icon-Vector"></use></svg></span
+              >Погоджуюся з розсилкою та приймаю
+              <a class="terms-of-contract" href=""
+                >&nbsp;&nbsp;Умови договору</a
+              ></label
             >
           </div>
           <button type="submit" class="submit">Відправити</button>
