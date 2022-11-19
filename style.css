@@ -540,9 +540,6 @@ img {
   align-items: center;
   gap: 12px;
 }
-.subscribe-area {
-  padding-left: 16px;
-}
 .submit-subscribe {
   width: 200px;
   height: 50px;
@@ -555,13 +552,13 @@ img {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
   line-height: calc(20 / 16);
-  
+  padding-left: 16px;
   height: 50px;
   width: 358px;
   border: 1px solid #ffffff4d;
   cursor: pointer;
   border-radius: 4px;
-  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -630,10 +627,9 @@ left:10px; */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-title {
-  font-size: 20;
+  font-size: 20px;
   font-weight: 700;
   line-height: calc(23 / 20);
-  text-transform: uppercase;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -664,9 +660,8 @@ left:10px; */
   color: #757575;
 }
 .input-icon {
+  display: block;
   position: relative;
-  height: 40px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon {
   position: absolute;
@@ -676,17 +671,19 @@ left:10px; */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-area-container {
-  margin-bottom: 12px;
+  display: block;
+  margin-bottom: 4px;
 }
 .modal-area-title {
+  display: block;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: #757575;
+  margin-bottom: 10px;
 }
-.modal-area-title span {
-  display: block;
-  margin-bottom: 4px;
+.modal-area-title:last-of-type {
+  margin-bottom: 20px;
 }
 .modal-area-coment {
   font-size: 12px;
@@ -696,13 +693,18 @@ left:10px; */
   width: 100%;
 }
 .modal-coment-text {
+  display: block;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: #757575;
   width: 100%;
   height: 120px;
-  padding-left: 16px;
+  padding: 12px 16px;
+  resize:none;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);;
+  border-radius: 4px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.close-modal {
@@ -737,9 +739,6 @@ left:10px; */
   width: 200px;
   height: 50px;
   border-radius: 4px;
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-accent);
   color: var(--secondary-text-color);
@@ -754,17 +753,17 @@ left:10px; */
   padding: 10px 52px;
   display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: auto 0;
+  margin: 0 auto;
 }
 .modal-container {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .comment {
   position: relative;
 }
 .modal-container.radio {
   align-items: center;
-  position: absolute;
+  justify-content: center;
   bottom: 120px;
   display: flex;
 }
@@ -780,20 +779,18 @@ left:10px; */
   color: #757575;
 }
 .accept span {
+  display: flex;
   fill: transparent;
   width: 16px;
   height: 15px;
   margin-right: 7px;
   border-radius: 2px;
-  background-image: url(../images/checked.svg);
-  background-position: center;
   border: 2px solid #212121;
-  background-repeat: no-repeat;
 }
 .accept-mailing:checked + .accept span {
   background-color: var(--color-accent);
   border: transparent;
-  fill: #ffffff;
+
 }
 .terms-of-contract {
   text-decoration: underline;
